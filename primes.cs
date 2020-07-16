@@ -2,11 +2,11 @@
 using System.Diagnostics;
 using System.Globalization;
 
-namespace primes
+namespace primes // This is a new version for git!
 {
     class Program
     {
-        static void Main(string[] args)// '\n' adds another blank line
+        static void Main(string[] args)
         {
             Stopwatch stopwatch = new Stopwatch();// used to time the main algorithm
             NumberFormatInfo nfi = new CultureInfo("en-CA").NumberFormat; //for thousands commas
