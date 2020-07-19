@@ -1,2 +1,2 @@
 # repo1
-for learning
+for learning Git
