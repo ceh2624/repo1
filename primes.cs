@@ -6,7 +6,7 @@ namespace primes // This is a new version for git!
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Stopwatch stopwatch = new Stopwatch();// used to time the main algorithm
             NumberFormatInfo nfi = new CultureInfo("en-CA").NumberFormat; //for thousands commas
