@@ -1,2 +1,4 @@
 # repo1
-for learning how to use Git...
+I've uploaded this C# project which finds primes up to a user given max 
+and counts them and optionally lists them.  It also has a little added bonus of
+summing all the primes, resulting in a stupid big number.
