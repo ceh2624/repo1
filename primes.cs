@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Globalization;
 
-namespace primes // This is a new version for git!
+namespace primes // This is a new version for git! Run this in the command prompt (old school)
 {
     class Program
     {
@@ -10,7 +10,7 @@ namespace primes // This is a new version for git!
         {
             Stopwatch stopwatch = new Stopwatch();// used to time the main algorithm
             NumberFormatInfo nfi = new CultureInfo("en-CA").NumberFormat; //for thousands commas
-			Console.WriteLine("Find primes\n");
+	    Console.WriteLine("Find primes\n");
             int max, upperBoundry, chk;
             double maxD;
             string maxS, listem;
@@ -24,9 +24,9 @@ namespace primes // This is a new version for git!
             Console.Write("Shall I list all the primes? yes or no -> ");
             listem = Console.ReadLine();
             Console.WriteLine();
-			stopwatch.Start();
+	    stopwatch.Start();
             int[] nums = new int[max + 1];
-			int count = 0;
+	    int count = 0;
             for(int x = 2; x <= max; x++)
             {
                 nums[x] = x;
@@ -43,31 +43,30 @@ namespace primes // This is a new version for git!
                     chk++;
                 } while (chk <= max);
             }
-			stopwatch.Stop();
+	    stopwatch.Stop();
             for(int z = 2; z<= max; z++)
             {
                 if (nums[z] != 0)
-				{
+		{
                     if(listem == "yes")
                     {
                         Console.WriteLine("{0} is prime.", nums[z].ToString("N0", nfi));
                     }
-					count++;
-				}
+			count++;
+		}
             }
-			
-			TimeSpan ts = stopwatch.Elapsed;
-			string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+		TimeSpan ts = stopwatch.Elapsed;
+		string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
                 ts.Hours, ts.Minutes, ts.Seconds,
                 ts.Milliseconds / 10); //create a human readable time
             
-			Console.WriteLine("RunTime = " + elapsedTime + "!");
-            Console.WriteLine("There are {0} prime numbers below {1}.",
+		Console.WriteLine("RunTime = " + elapsedTime + "!");
+            	Console.WriteLine("There are {0} prime numbers below {1}.",
                 count.ToString("N0", nfi),
                 max.ToString("N0", nfi));
 
-            long prSum = 0;
-			foreach (int x in nums)
+            	long prSum = 0;
+		foreach (int x in nums)
             {
                 prSum += x;
             }
